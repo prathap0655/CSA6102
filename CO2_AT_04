@@ -1,0 +1,60 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/prathap0655/CSA6102/blob/error-code-analysis/CO2_AT_04\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "custody_log = []\n",
+        "def add_entry(evidence_id, handler, action):\n",
+        "    entry = {'evidence_id': evidence_id, 'handler': handler, 'action': action}\n",
+        "    custody_log.append(entry)\n",
+        "def print_log():\n",
+        "    for entry in custody_log:\n",
+        "        print(str(entry['evidence_id']) + ' - ' + str(entry['handler']) + ' - ' + str(entry['action']))\n",
+        "add_entry('EVD-101', 'A.Kumar', 'Collected')\n",
+        "add_entry('EVD-101', 'S.Rao', 'Analysed')\n",
+        "print_log()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Hjz6U8OfWXGa",
+        "outputId": "3caabca6-5c8f-4b3e-bfa5-cdb4b9149f5c"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "EVD-101 - A.Kumar - Collected\n",
+            "EVD-101 - S.Rao - Analysed\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colab",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
